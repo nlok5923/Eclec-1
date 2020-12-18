@@ -2,7 +2,7 @@
 // basically it will include pdo file for data connection to the sql server
 include_once('pdo1.php');
 // it make a new class of database_connection1 called signupdata
-$signupdata=new Database_Connection1();
+$signupdata=new Database_Connection();
 // it checks whether all field of form are filled or not
 if(isset($_POST['name']) && isset($_POST['username']) && isset($_POST['email']) && isset($_POST['psw']))
 {
@@ -12,6 +12,14 @@ $Username=$_POST['username'];
 $Useremail=$_POST['email'];
 $Userpassword=md5($_POST['psw']);
 //Function Calling
+$sql = $signupdata->checking($Name);
+if($sql->num_rows > 0)
+{
+  echo "<script>alert('Username exists Try something else');</script>";
+  echo "<script>window.location.href='sign_up.php'</script>"; 
+}
+else
+{
 $sql=$signupdata->signup($Name,$Username,$Useremail,$Userpassword);
 if($sql)
 {
@@ -26,11 +34,12 @@ echo "<script>alert('Something went wrong. Please try again');</script>";
 echo "<script>window.location.href='sign_up.php'</script>";
 }
 }
+}
 ?>
 <!DOCTYPE html>
 <html>
   <head>
-    <title>NHDD | SIGN-UP</title>
+    <title>Eclec | SIGN-UP</title>
     <link rel="stylesheet" href="../CSS/login.css?v=<?php echo time(); ?>">
     <link
       rel="stylesheet"
@@ -55,13 +64,13 @@ echo "<script>window.location.href='sign_up.php'</script>";
           <input
             type="text"
             class="user__field__signup"
-            placeholder="Enter Username"
+            placeholder="Enter name"
             name="username"
             required
           />
           <input
             type="text"
-            placeholder="First name"
+            placeholder="Enter Username"
             name="name"
             required
           />

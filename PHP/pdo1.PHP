@@ -38,7 +38,7 @@ return $adding;
 }
 public function signin($username,$userpassword)
 {
-$seeing=mysqli_query($this->dbhost,"select Name from signupid where Username='$username' and Password='$userpassword'");
+$seeing=mysqli_query($this->dbhost,"select Name from signupid where Name='$username' and Password='$userpassword'");
 return $seeing;
 }
 public function imagesaving($Name,$image,$Userdate,$user)
