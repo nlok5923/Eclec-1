@@ -2,7 +2,7 @@
 // Include the database configuration file
  session_start();
 include_once('pdo1.php');// it consider the pdo1.php in this code also
-$data = new Database_Connection();
+$data = new Database_Connection1();
 if(isset($_POST['equipment_name']) && isset($_POST['min_hrs']) && isset($_POST['max_hrs']) && isset($_POST['priority']) && isset($_POST['watt_consume']))
 {
 $equipment=$_POST['equipment_name'];

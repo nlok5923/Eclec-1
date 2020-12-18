@@ -1,0 +1,26 @@
+.usage__area {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card__holder {
+  width: 80%;
+  height: 20vh;
+  background-color: white;
+}
+
+.equip__name {
+  text-align: center;
+  font-size: 25px;
+  font-family: "montserrat";
+}
+.card__area {
+  height: 900px;
+  width: 100%;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

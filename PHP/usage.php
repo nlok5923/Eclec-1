@@ -11,6 +11,7 @@ include_once('pdo1.php');
     <link rel="stylesheet" href="../CSS/add.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="../CSS/receipts.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="../CSS/expense_report.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="../CSS/usage.css?v=<?php echo time(); ?>">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
@@ -39,9 +40,10 @@ include_once('pdo1.php');
         <button  class="panel__item first__item"><i class="fa fa-angle-double-up adjust__size"></i><a>Score & deviation</a></button>
         <button  class="panel__item first__item"><i class="fa fa-angle-double-up adjust__size"></i><a>Ranking</a></button>
         </div>
-        <div class ="user__inputarea">
+        <div class ="usage__area">
            <h1 class="input__head">Equipment usage information</h1>
-           <hr />
+           <div class="card__area">
+           </div>
            <?php
             $username = $_SESSION['name'];
             $dataviewing=new Database_Connection();
@@ -61,10 +63,11 @@ include_once('pdo1.php');
     </div>
   </div>
 <?php
-                     
+
                      }?>
 </div>
 <br><br>
+</div>
 </div>
     </section>
     <script src="../Script/add_expense.js?v=<?php echo time(); ?>"></script>

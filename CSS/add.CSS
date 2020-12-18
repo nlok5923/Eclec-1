@@ -195,6 +195,23 @@ input::placeholder {
   color: black;
   font-family: "montserrat";
   padding-left: 20px;
+}
+.score__input  {
+  margin-left: 15%;
+  height: 6vh;
+  width: 75%;
+  font-size: 20px;
+  padding-left: 10px;
+  background-color: #f5f7f7;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  box-shadow: 5px 5px 10px grey;
+}
+.score__input:hover {
+  color: black;
+  font-family: "montserrat";
+  padding-left: 20px;
   font-size: 20px;
 }
 .BUTTON_KMY {

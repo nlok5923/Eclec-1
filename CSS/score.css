@@ -1,4 +1,37 @@
 .get__score {
   width: 75%;
 }
-
+.score__head {
+  margin-top: 5%;
+  text-align: center;
+  font-size: 28px;
+  font-family: "montserrat";
+  color: white;
+}
+.gen__btn {
+  margin: auto;
+  background:#1e62d0;
+  border-radius: 20px;
+  color: #ffffff;
+  margin-top: 2%;
+  font-size: 20px;
+  font-weight: 100;
+  padding: 5px 20px;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  font-family: "montserrat";
+  display: block;
+}
+.gen__btn:hover {
+  background: white;
+  color:#1e62d0;
+}
+.gen__score {
+  margin-top: 10%;
+  text-align: center;
+  font-size: 28px;
+  font-family: "montserrat";
+  color: white;
+}

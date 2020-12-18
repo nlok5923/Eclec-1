@@ -19,13 +19,13 @@ public function equipment($equipment,$min,$max,$priority,$consumption,$Username)
 $adding=mysqli_query($this->dbhost,"insert into equipment(user,equipment,min_hrs,max_hrs,priority,watt_consumption) values('$Username','$equipment','$min','$max','$priority','$consumption')");
 return $adding;
 }
-        
+
 public function viewing($username)
 {
 $viewing = mysqli_query($this->dbhost,"select * from equipment where user='$username' ");
 return $viewing;
 }
-        
+
 public function updatevalue($fname,$lname,$email,$pass,$income,$sum,$user)
 {
 $update = mysqli_query($this->dbhost,"UPDATE signupid SET firstname='$fname', lastname='$lname',income='$income' ,Email='$email',expenses = '$sum' WHERE Name='$user' AND Password='$pass' ");
