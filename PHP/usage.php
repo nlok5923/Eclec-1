@@ -1,7 +1,6 @@
 <?php
-// Include the database configuration file
  session_start();
-include_once('pdo1.php');// it consider the pdo1.php in this code also
+include_once('pdo1.php');
 ?>
 
 <!DOCTYPE html>
@@ -43,18 +42,29 @@ include_once('pdo1.php');// it consider the pdo1.php in this code also
         <div class ="user__inputarea">
            <h1 class="input__head">Equipment usage information</h1>
            <hr />
-           <table class="expense__report__table">
-            <thead>
-            <tr>
-              <th>S.NO.</th>
-              <th>Equipment name</th>
-              <th>Usage time(hrs)</th>
-              <th>Power consumed</th>
-            </tr>
-            </thead>
-             </tbody>
-             </table>
-            </div>
+           <?php
+            $username = $_SESSION['name'];
+            $dataviewing=new Database_Connection();
+              $sql = $dataviewing->viewing($username);
+              while ($row=mysqli_fetch_array($sql)) {
+                  ?>
+           <div class="row">
+  <div class="column">
+    <div class="card">
+    <h2><?php  echo $row['equipment'];?></h2>
+    <p> Minimum time :  <?php  echo $row['min_hrs'];?></p>
+    <p> Maximum time :  <?php  echo $row['max_hrs'];?></p>
+    <p> Priority :  <?php  echo $row['priority'];?></p>
+    <p> Watt_Consumption <?php  echo $row['watt_consumption'];?></p>
+    <p><?php echo "<a href='delete.php?a=".$row['RegDate']."'>Delete</a>"; ?></p>
+    <p><?php echo "<a href='Update_info.php?a=".$row['RegDate']."'>Update</a>"; ?></p>
+    </div>
+  </div>
+<?php
+                     
+                     }?>
+</div>
+<br><br>
 </div>
     </section>
     <script src="../Script/add_expense.js?v=<?php echo time(); ?>"></script>

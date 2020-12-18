@@ -2,6 +2,28 @@
 // Include the database configuration file
  session_start();
 include_once('pdo1.php');// it consider the pdo1.php in this code also
+$data = new Database_Connection();
+if(isset($_POST['equipment_name']) && isset($_POST['min_hrs']) && isset($_POST['max_hrs']) && isset($_POST['priority']) && isset($_POST['watt_consume']))
+{
+$equipment=$_POST['equipment_name'];
+$min=$_POST['min_hrs'];
+$max=$_POST['max_hrs'];
+$priority=($_POST['priority']);
+$consumption =($_POST['watt_consume']);
+$Username=($_SESSION['name']);
+$sql=$data->equipment($equipment,$min,$max,$priority,$consumption,$Username);
+if($sql)
+{
+echo  '<div style="background-color:green"><h1 style="text-align:center;color:white">Sucess</h1></div>';
+echo "<script>window.location.href='add_expenses.php'</script>";
+}
+else
+{
+echo '<div style="background-color:red"><h1 style="text-align:center;color:white">Oops!! Try Again</h1></div>';
+echo "<script>window.location.href='add_expenses.php'</script>";
+}
+}
+?>
 ?>
 
 <!DOCTYPE html>
@@ -39,12 +61,14 @@ include_once('pdo1.php');// it consider the pdo1.php in this code also
         <button  class="panel__item first__item"><i class="fa fa-angle-double-up adjust__size"></i><a>Ranking</a></button>
         </div>
         <div class="user__inputarea">
+        <form method="POST">
         <input type="text" name="equipment_name" placeholder="Enter equipment name ">
         <input type="number" name="min_hrs" placeholder="Enter min hours of usage" >
         <input type="number" name="max_hrs" placeholder="Enter max hours of usage">
         <input type="number" name="priority" placeholder="Enter priority of it's usage">
         <input type="number" name="watt_consume" placeholder="Enter the watt it consumes">
         <button type="submit" class="add__btn" >Add Equipment </button>
+        <form>
         </div>
     </section>
     <script src="../Script/add_expense.js?v=<?php echo time(); ?>"></script>
