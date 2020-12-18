@@ -201,7 +201,7 @@ input::placeholder {
   box-shadow: 5px 5px 10px grey;
   margin-left: 15%;
   margin-top: 4%;
-  background: greenyellow;
+  background:#1e62d0;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
@@ -216,10 +216,39 @@ input::placeholder {
   font-family: "montserrat";
   display: block;
 }
+.add__btn {
+  box-shadow: 5px 5px 10px grey;
+  background:#1e62d0;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 100;
+  padding: 5px 10px;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  font-family: "montserrat";
+  max-width: 20%;
+  margin-top: 5%;
+  margin-left: 15%;
+}
+
+.add__btn:hover {
+  border: solid #337fed 1px;
+  background: white;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #1e62d0;
+}
 
 .BUTTON_KMY:hover {
   border: solid #337fed 1px;
-  background: #1e62d0;
+  background: white;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
   border-radius: 20px;
