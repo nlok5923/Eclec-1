@@ -74,22 +74,12 @@ echo "<script>window.location.href='add_receipt.php'</script>";
         <img class="user__img" src ="../Images/bg.jpg" alt="bg image">
         <h1 class="user__name"><?php echo $_SESSION['name'] ?></h1>
         <hr>
-        <!-- <button onclick="ExpenseDropdown()"class="panel__item first__item"><i class="fas fa-dollar-sign adjust__size"></i>Expenses</button>
-        <div id="dropdown" class="expense__content">
-            <a href="add_expenses.php">Add expenses</a>
-            <a href="view_expense_categorywise.php">Manage expenses</a>
-        </div>
-        <button onclick="ExpenseReportDropdown()" class="panel__item first__item call__drop"><i class="fa fa-file-text adjust__size"></i></i>Expense Report</button>
-        <div id="dropdown_er" class="expense_report__content">
-            <a href="daywise_exp_view.php">Daywise expenses</a>
-        </div>
-        <button  class="panel__item first__item"><i class="fa fa-save  adjust__size"></i> <a href="add_receipt.php">Save Receipts</a></h1></button>
-        <button onclick="viewingExp()" id="viewDis"  class="panel__item first__item"><i class="fa fa-eye adjust__size"></i> <a href="#">View Receipts</a></h1></button>
-        <div id="dropdown_vr" class="vr_content">
-            <a href="date_reciept.php">View datewise</a>
-            <a href="view_receipt.php">View All</a>
-        </div> -->
+        <button  class="panel__item first__item"><i class="fa fa-save  adjust__size"></i> <a href="add_receipt.php">Save Bills</a></h1></button>
         <button class="panel__item first__item"><i class="fa fa-angle-double-up adjust__size"></i> <a href="Update.php">Update Profile</a></h1></button>
+        <button  class="panel__item first__item"><i class="fa fa-angle-double-up adjust__size"></i><a>Enter Equipments</a></button>
+        <button  class="panel__item first__item"><i class="fa fa-angle-double-up adjust__size"></i><a>See Usage</a></button>
+        <button  class="panel__item first__item"><i class="fa fa-angle-double-up adjust__size"></i><a>Score & deviation</a></button>
+        <button  class="panel__item first__item"><i class="fa fa-angle-double-up adjust__size"></i><a>Ranking</a></button>
         </div>
         <div class="add__reciepts">
             <h1><u>Receipt</u></h1>
@@ -97,7 +87,6 @@ echo "<script>window.location.href='add_receipt.php'</script>";
             <form method="POST" enctype="multipart/form-data">
             <input type="text" class="first" name="expense" placeholder="expense name"/><br>
             <input type="date" placeholder="Date" name="date"><br >
-            <!-- <input type="text" placeholder="Description" /><br /> -->
             <textarea rows="7" cols="32" name="description" placeholder="Add description of receipt"></textarea><br>
             <label class="sel__img">Select Image File:(only .jpg ,.png , .jpeg)</label>
              <input type="file" name="image">
