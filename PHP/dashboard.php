@@ -128,7 +128,7 @@ $income=$row['income'];
         <img class="user__img" src ="../Images/bg.jpg" alt="bg image">
         <h1 class="user__name"><?php echo $_SESSION['name'] ?></h1>
         <hr>
-        <button onclick="ExpenseDropdown()"class="panel__item first__item"><i class="fas fa-dollar-sign adjust__size"></i>Expenses</button>
+        <!-- <button onclick="ExpenseDropdown()"class="panel__item first__item"><i class="fas fa-dollar-sign adjust__size"></i>Expenses</button>
         <div id="dropdown" class="expense__content">
             <a href="add_expenses.php">Add expenses</a>
             <a href="view_expense_categorywise.php">Manage expenses</a>
@@ -136,13 +136,13 @@ $income=$row['income'];
         <button onclick="ExpenseReportDropdown()" class="panel__item first__item call__drop"><i class="fa fa-file-text adjust__size"></i></i>Expense Report</button>
         <div id="dropdown_er" class="expense_report__content">
             <a href="daywise_exp_view.php">Daywise expenses</a>
-        </div>
+        </div> -->
         <button  class="panel__item first__item"><i class="fa fa-save  adjust__size"></i> <a href="add_receipt.php">Save Receipts</a></h1></button>
-        <button onclick="viewingExp()" id="viewDis"  class="panel__item first__item"><i class="fa fa-eye adjust__size"></i> <a href="#">View Receipts</a></h1></button>
+        <!-- <button onclick="viewingExp()" id="viewDis"  class="panel__item first__item"><i class="fa fa-eye adjust__size"></i> <a href="#">View Receipts</a></h1></button>
         <div id="dropdown_vr" class="vr_content">
             <a href="date_reciept.php">View datewise</a>
             <a href="view_receipt.php">View All</a>
-        </div>
+        </div> -->
         <button class="panel__item first__item" onclick="downloadInit()"><i class="fa fa-save  adjust__size"></i>  <a>Save Report</a></h1></button>
         <button class="panel__item first__item"><i class="fa fa-angle-double-up adjust__size"></i> <a href="Update.php">Update Profile</a></h1></button>
         </div>

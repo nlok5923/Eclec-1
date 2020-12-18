@@ -74,7 +74,7 @@ echo "<script>window.location.href='add_receipt.php'</script>";
         <img class="user__img" src ="../Images/bg.jpg" alt="bg image">
         <h1 class="user__name"><?php echo $_SESSION['name'] ?></h1>
         <hr>
-        <button onclick="ExpenseDropdown()"class="panel__item first__item"><i class="fas fa-dollar-sign adjust__size"></i>Expenses</button>
+        <!-- <button onclick="ExpenseDropdown()"class="panel__item first__item"><i class="fas fa-dollar-sign adjust__size"></i>Expenses</button>
         <div id="dropdown" class="expense__content">
             <a href="add_expenses.php">Add expenses</a>
             <a href="view_expense_categorywise.php">Manage expenses</a>
@@ -88,7 +88,7 @@ echo "<script>window.location.href='add_receipt.php'</script>";
         <div id="dropdown_vr" class="vr_content">
             <a href="date_reciept.php">View datewise</a>
             <a href="view_receipt.php">View All</a>
-        </div>
+        </div> -->
         <button class="panel__item first__item"><i class="fa fa-angle-double-up adjust__size"></i> <a href="Update.php">Update Profile</a></h1></button>
         </div>
         <div class="add__reciepts">
