@@ -2,7 +2,7 @@
 // Include the database configuration file
  session_start();
 include_once('pdo1.php');// it consider the pdo1.php in this code also
-$data = new Database_Connection1();
+$data = new Database_Connection();
 if(isset($_POST['equipment_name']) && isset($_POST['numbers']) && isset($_POST['min_hrs']) && isset($_POST['max_hrs']) && isset($_POST['priority']) && isset($_POST['watt_consume']))
 {
 $equipment=$_POST['equipment_name'];
@@ -10,21 +10,20 @@ $min=$_POST['min_hrs'];
 $max=$_POST['max_hrs'];
 $priority=($_POST['priority']);
 $consumption =($_POST['watt_consume']);
-$number = ($_POST['numbers'])
-$Username=($_SESSION['name']);
-$sql=$data->equipment($equipment,$min,$max,$priority,$consumption,$Username,$number);
+$number = ($_POST['numbers']);
+$username=($_SESSION['name']);
+$sql=$data->equipment($equipment,$min,$max,$priority,$consumption,$username,$number);
 if($sql)
 {
 echo  '<div style="background-color:green"><h1 style="text-align:center;color:white">Sucess</h1></div>';
-echo "<script>window.location.href='add_expenses.php'</script>";
+echo "<script>window.location.href='enter_equipments.php'</script>";
 }
 else
 {
 echo '<div style="background-color:red"><h1 style="text-align:center;color:white">Oops!! Try Again</h1></div>';
-echo "<script>window.location.href='add_expenses.php'</script>";
+echo "<script>window.location.href='enter_equipments.php'</script>";
 }
 }
-?>
 ?>
 
 <!DOCTYPE html>
