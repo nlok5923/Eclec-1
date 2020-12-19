@@ -3,18 +3,18 @@ include('pdo1.php');
 session_start();
 $dataviewing=new Database_Connection();
 $equipments = array(
-  array(0,0,0,0,0),
-    array(0,0,0,0,0),
-  array(0,0,0,0,0),
-    array(0,0,0,0,0),
-  array(0,0,0,0,0),
-    array(0,0,0,0,0),
-  array(0,0,0,0,0),
-    array(0,0,0,0,0),
-  array(0,0,0,0,0),
-    array(0,0,0,0,0),
-  array(0,0,0,0,0),
-    array(0,0,0,0,0)
+  array(0,0,0,0,0,0),
+    array(0,0,0,0,0,0),
+  array(0,0,0,0,0,0),
+    array(0,0,0,0,0,0),
+  array(0,0,0,0,0,0),
+    array(0,0,0,0,0,0),
+  array(0,0,0,0,0,0),
+    array(0,0,0,0,0,0),
+  array(0,0,0,0,0,0),
+    array(0,0,0,0,0,0),
+  array(0,0,0,0,0,0),
+    array(0,0,0,0,0,0)
   );
 $username = $_SESSION['name'];
 echo $username;
@@ -28,6 +28,7 @@ while ($row=mysqli_fetch_array($sql)) {
   <?php  $equipments[$j][2] = $row['max_hrs'];?>
   <?php $equipments[$j][3] = $row['priority'];?>
   <?php  $equipments[$j][4] = $row['watt_consumption'];?>
+<?php  $equipments[$j][5] = $row['number'];?>
   <?php
   $j = $j+1;
 }
