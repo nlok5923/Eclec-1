@@ -58,6 +58,7 @@ include_once('pdo1.php');
               <th>S.No. </th>
               <th>Min usage(hrs)</th>
               <th>Max usage(hrs)</th>
+              <th>No. of equipment</th>
               <th>watt consumption(W)</th>
               <th> ....</th>
               <th> ....</th>
@@ -67,6 +68,7 @@ include_once('pdo1.php');
             <td><?php echo $count ;?></td>
             <td><?php  echo $row['min_hrs'];?></td>
             <td><?php  echo $row['max_hrs'];?></td>
+            <td><?php  echo $row['number'];?></td>
             <td><?php  echo $row['watt_consumption'];?></td>
             <td><?php echo "<a href='delete.php?a=".$row['RegDate']."'>Delete</a>"; ?></td>
             <td><?php echo "<a href='Update_info.php?a=".$row['RegDate']."'>Update</a>"; ?></td>

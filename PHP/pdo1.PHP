@@ -14,9 +14,9 @@ if (mysqli_connect_errno())
 echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
 }
-public function equipment($equipment,$min,$max,$priority,$consumption,$Username)
+public function equipment($equipment,$min,$max,$priority,$consumption,$Username,$number)
 {
-$adding=mysqli_query($this->dbhost,"insert into equipment(user,equipment,min_hrs,max_hrs,priority,watt_consumption) values('$Username','$equipment','$min','$max','$priority','$consumption')");
+$adding=mysqli_query($this->dbhost,"insert into equipment(user,equipment,min_hrs,max_hrs,priority,watt_consumption,number) values('$Username','$equipment','$min','$max','$priority','$consumption','$number')");
 return $adding;
 }
 
