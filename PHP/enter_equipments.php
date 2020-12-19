@@ -3,15 +3,17 @@
  session_start();
 include_once('pdo1.php');// it consider the pdo1.php in this code also
 $data = new Database_Connection();
-if(isset($_POST['equipment_name']) && isset($_POST['min_hrs']) && isset($_POST['max_hrs']) && isset($_POST['priority']) && isset($_POST['watt_consume']))
+if(isset($_POST['equipment_name']) && isset($_POST['numbers']) && isset($_POST['min_hrs']) && isset($_POST['max_hrs']) && isset($_POST['priority']) && isset($_POST['watt_consume']))
+
 {
 $equipment=$_POST['equipment_name'];
 $min=$_POST['min_hrs'];
 $max=$_POST['max_hrs'];
 $priority=($_POST['priority']);
 $consumption =($_POST['watt_consume']);
+$number = ($_POST['multiplicity'])
 $Username=($_SESSION['name']);
-$sql=$data->equipment($equipment,$min,$max,$priority,$consumption,$Username);
+$sql=$data->equipment($equipment,$min,$max,$priority,$consumption,$Username,$number);
 if($sql)
 {
 echo  '<div style="background-color:green"><h1 style="text-align:center;color:white">Sucess</h1></div>';
@@ -64,6 +66,7 @@ echo "<script>window.location.href='enter_equipments.php'</script>";
         <input type="number" name="min_hrs" placeholder="Enter min hours of usage" >
         <input type="number" name="max_hrs" placeholder="Enter max hours of usage">
         <input type="number" name="priority" placeholder="Enter priority of it's usage">
+        <input type="number" name="numbers" placeholder="Enter the no of product">
         <input type="number" name="watt_consume" placeholder="Enter the watt it consumes">
         <input type="number" name="multiplicity" placeholder="Enter the multiplicity of equipment">
         <button type="submit" class="add__btn" >Add Equipment </button>
