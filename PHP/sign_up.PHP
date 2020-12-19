@@ -4,12 +4,13 @@ include_once('pdo1.php');
 // it make a new class of database_connection1 called signupdata
 $signupdata=new Database_Connection();
 // it checks whether all field of form are filled or not
-if(isset($_POST['name']) && isset($_POST['username']) && isset($_POST['email']) && isset($_POST['psw']))
+if(isset($_POST['name']) && isset($_POST['username']) && isset($_POST['email']) && isset($_POST['psw']) && isset($_POST['locality'])
 {
 // Posted Values
 $Name=$_POST['name'];
 $Username=$_POST['username'];
 $Useremail=$_POST['email'];
+$locality = $_POST['locality'];
 $Userpassword=md5($_POST['psw']);
 //Function Calling
 $sql = $signupdata->checking($Name);
@@ -20,7 +21,7 @@ if($sql->num_rows > 0)
 }
 else
 {
-$sql=$signupdata->signup($Name,$Username,$Useremail,$Userpassword);
+$sql=$signupdata->signup($Name,$Username,$Useremail,$Userpassword,$locality);
 if($sql)
 {
 // Message for successfull insertion
@@ -72,6 +73,13 @@ echo "<script>window.location.href='sign_up.php'</script>";
             type="text"
             placeholder="Enter Username"
             name="name"
+            required
+          />
+	<input
+            class="field"
+            type="text"
+            placeholder="Enter locality(just one word)"
+            name="locality"
             required
           />
           <input
