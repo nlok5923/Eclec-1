@@ -11,7 +11,7 @@ $min=$_POST['min_hrs'];
 $max=$_POST['max_hrs'];
 $priority=($_POST['priority']);
 $consumption =($_POST['watt_consume']);
-$number = ($_POST['multiplicity'])
+$number = ($_POST['number'])
 $Username=($_SESSION['name']);
 $sql=$data->equipment($equipment,$min,$max,$priority,$consumption,$Username,$number);
 if($sql)
@@ -68,7 +68,7 @@ echo "<script>window.location.href='enter_equipments.php'</script>";
         <input type="number" name="priority" placeholder="Enter priority of it's usage">
         <input type="number" name="numbers" placeholder="Enter the no of product">
         <input type="number" name="watt_consume" placeholder="Enter the watt it consumes">
-        <input type="number" name="multiplicity" placeholder="Enter the multiplicity of equipment">
+        <input type="number" name="number" placeholder="Enter the multiplicity of equipment">
         <button type="submit" class="add__btn" >Add Equipment </button>
         <form>
         </div>
