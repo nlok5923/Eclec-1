@@ -35,6 +35,8 @@ while ($row=mysqli_fetch_array($sql)) {
 <?php
 for($i =0;$i<$k;$i++)
 {
+  echo $k;
+  echo "\n";
   echo $equipments[$i][0];
   echo "\n";
   echo $equipments[$i][1];
@@ -46,4 +48,4 @@ for($i =0;$i<$k;$i++)
   echo $equipments[$i][4];
   echo "\n";
 }
-
+?>
