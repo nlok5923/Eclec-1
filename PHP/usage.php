@@ -42,277 +42,41 @@ include_once('pdo1.php');
         <div class ="usage__area">
            <h1 class="input__head">Equipment usage information</h1>
            <div class="card__area">
-           <div class="card__holder">
-           <h1 class="equip__name">Refrigenrator</h1>
-           <table class="expense__report__table">
-            <thead>
-            <tr>
-              <th>S.NO.</th>
-              <th>Equipment name</th>
-              <th>usage(hr)</th>
-              <th>watt consumption(W)</th>
-            </tr>
-            <tr>
-            <td>1</td>
-            <td>Radio</td>
-            <td>2</td>
-            <td>220</td>
-            </tr>
-            </thead>
-            </table>
-           </div>
-           <div class="card__holder">
-           <h1 class="equip__name">Refrigenrator</h1>
-           <table class="expense__report__table">
-            <thead>
-            <tr>
-              <th>S.NO.</th>
-              <th>Equipment name</th>
-              <th>usage(hr)</th>
-              <th>watt consumption(W)</th>
-            </tr>
-            <tr>
-            <td>1</td>
-            <td>Radio</td>
-            <td>2</td>
-            <td>220</td>
-            </tr>
-            </thead>
-            </table>
-           </div>
-           <div class="card__holder">
-           <h1 class="equip__name">Refrigenrator</h1>
-           <table class="expense__report__table">
-            <thead>
-            <tr>
-              <th>S.NO.</th>
-              <th>Equipment name</th>
-              <th>usage(hr)</th>
-              <th>watt consumption(W)</th>
-            </tr>
-            <tr>
-            <td>1</td>
-            <td>Radio</td>
-            <td>2</td>
-            <td>220</td>
-            </tr>
-            </thead>
-            </table>
-           </div>
-           <div class="card__holder">
-           <h1 class="equip__name">Refrigenrator</h1>
-           <table class="expense__report__table">
-            <thead>
-            <tr>
-              <th>S.NO.</th>
-              <th>Equipment name</th>
-              <th>usage(hr)</th>
-              <th>watt consumption(W)</th>
-            </tr>
-            <tr>
-            <td>1</td>
-            <td>Radio</td>
-            <td>2</td>
-            <td>220</td>
-            </tr>
-            </thead>
-            </table>
-           </div>
-           <div class="card__holder">
-           <h1 class="equip__name">Refrigenrator</h1>
-           <table class="expense__report__table">
-            <thead>
-            <tr>
-              <th>S.NO.</th>
-              <th>Equipment name</th>
-              <th>usage(hr)</th>
-              <th>watt consumption(W)</th>
-            </tr>
-            <tr>
-            <td>1</td>
-            <td>Radio</td>
-            <td>2</td>
-            <td>220</td>
-            </tr>
-            </thead>
-            </table>
-           </div>
-           <div class="card__holder">
-           <h1 class="equip__name">Refrigenrator</h1>
-           <table class="expense__report__table">
-            <thead>
-            <tr>
-              <th>S.NO.</th>
-              <th>Equipment name</th>
-              <th>usage(hr)</th>
-              <th>watt consumption(W)</th>
-            </tr>
-            <tr>
-            <td>1</td>
-            <td>Radio</td>
-            <td>2</td>
-            <td>220</td>
-            </tr>
-            </thead>
-            </table>
-           </div>
-           <div class="card__holder">
-           <h1 class="equip__name">Refrigenrator</h1>
-           <table class="expense__report__table">
-            <thead>
-            <tr>
-              <th>S.NO.</th>
-              <th>Equipment name</th>
-              <th>usage(hr)</th>
-              <th>watt consumption(W)</th>
-            </tr>
-            <tr>
-            <td>1</td>
-            <td>Radio</td>
-            <td>2</td>
-            <td>220</td>
-            </tr>
-            </thead>
-            </table>
-           </div>
-           <div class="card__holder">
-           <h1 class="equip__name">Refrigenrator</h1>
-           <table class="expense__report__table">
-            <thead>
-            <tr>
-              <th>S.NO.</th>
-              <th>Equipment name</th>
-              <th>usage(hr)</th>
-              <th>watt consumption(W)</th>
-            </tr>
-            <tr>
-            <td>1</td>
-            <td>Radio</td>
-            <td>2</td>
-            <td>220</td>
-            </tr>
-            </thead>
-            </table>
-           </div>
-           <div class="card__holder">
-           <h1 class="equip__name">Refrigenrator</h1>
-           <table class="expense__report__table">
-            <thead>
-            <tr>
-              <th>S.NO.</th>
-              <th>Equipment name</th>
-              <th>usage(hr)</th>
-              <th>watt consumption(W)</th>
-            </tr>
-            <tr>
-            <td>1</td>
-            <td>Radio</td>
-            <td>2</td>
-            <td>220</td>
-            </tr>
-            </thead>
-            </table>
-           </div>
-           <div class="card__holder">
-           <h1 class="equip__name">Refrigenrator</h1>
-           <table class="expense__report__table">
-            <thead>
-            <tr>
-              <th>S.NO.</th>
-              <th>Equipment name</th>
-              <th>usage(hr)</th>
-              <th>watt consumption(W)</th>
-            </tr>
-            <tr>
-            <td>1</td>
-            <td>Radio</td>
-            <td>2</td>
-            <td>220</td>
-            </tr>
-            </thead>
-            </table>
-           </div>
-           <div class="card__holder">
-           <h1 class="equip__name">Refrigenrator</h1>
-           <table class="expense__report__table">
-            <thead>
-            <tr>
-              <th>S.NO.</th>
-              <th>Equipment name</th>
-              <th>usage(hr)</th>
-              <th>watt consumption(W)</th>
-            </tr>
-            <tr>
-            <td>1</td>
-            <td>Radio</td>
-            <td>2</td>
-            <td>220</td>
-            </tr>
-            </thead>
-            </table>
-           </div>
-           <div class="card__holder">
-           <h1 class="equip__name">Refrigenrator</h1>
-           <table class="expense__report__table">
-            <thead>
-            <tr>
-              <th>S.NO.</th>
-              <th>Equipment name</th>
-              <th>usage(hr)</th>
-              <th>watt consumption(W)</th>
-            </tr>
-            <tr>
-            <td>1</td>
-            <td>Radio</td>
-            <td>2</td>
-            <td>220</td>
-            </tr>
-            </thead>
-            </table>
-           </div>
-           <div class="card__holder">
-           <h1 class="equip__name">Refrigenrator</h1>
-           <table class="expense__report__table">
-            <thead>
-            <tr>
-              <th>S.NO.</th>
-              <th>Equipment name</th>
-              <th>usage(hr)</th>
-              <th>watt consumption(W)</th>
-            </tr>
-            <tr>
-            <td>1</td>
-            <td>Radio</td>
-            <td>2</td>
-            <td>220</td>
-            </tr>
-            </thead>
-            </table>
-           </div>
-           </div>
-           <?php
+        <?php
             $username = $_SESSION['name'];
             $dataviewing=new Database_Connection();
               $sql = $dataviewing->viewing($username);
-              while ($row=mysqli_fetch_array($sql)) {
+              $count = 1;
+              while ($row=mysqli_fetch_array($sql)) {  
                   ?>
-           <div class="row">
-  <div class="column">
-    <div class="card">
-    <h2><?php  echo $row['equipment'];?></h2>
-    <p> Minimum time :  <?php  echo $row['min_hrs'];?></p>
-    <p> Maximum time :  <?php  echo $row['max_hrs'];?></p>
-    <p> Priority :  <?php  echo $row['priority'];?></p>
-    <p> Watt_Consumption <?php  echo $row['watt_consumption'];?></p>
-    <p><?php echo "<a href='delete.php?a=".$row['RegDate']."'>Delete</a>"; ?></p>
-    <p><?php echo "<a href='Update_info.php?a=".$row['RegDate']."'>Update</a>"; ?></p>
-    </div>
-  </div>
+           
+           <div class="card__holder">
+           <h1 class="equip__name"><?php  echo $row['equipment'];?></h1>
+           <table class="expense__report__table">
+            <thead>
+            <tr>
+              <th>S.No. </th>
+              <th>Min usage(hrs)</th>
+              <th>Max usage(hrs)</th>
+              <th>watt consumption(W)</th>
+              <th> ....</th>
+              <th> ....</th>
+            </tr>
+            
+            <tr>
+            <td><?php echo $count ;?></td>
+            <td><?php  echo $row['min_hrs'];?></td>
+            <td><?php  echo $row['max_hrs'];?></td>
+            <td><?php  echo $row['watt_consumption'];?></td>
+            <td><?php echo "<a href='delete.php?a=".$row['RegDate']."'>Delete</a>"; ?></td>
+            <td><?php echo "<a href='Update_info.php?a=".$row['RegDate']."'>Update</a>"; ?></td>
+            </tr>
+            </thead>
+            </table>
+           </div>
 <?php
-
+$count = $count+1;
                      }?>
-</div>
-<br><br>
 </div>
 </div>
     </section>
