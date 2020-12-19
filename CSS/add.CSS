@@ -166,11 +166,6 @@ header {
 .expense_report__content a:hover {
   color: blue;
 }
-.input__head {
-  text-align: center;
-  font-size: 30px;
-  font-family: "montserrat";
-}
 .handle__form {
   width: 100%;
   justify-content: center;

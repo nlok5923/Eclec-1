@@ -220,18 +220,18 @@ try {
     type: 'bar', //bar, pie, horizontal , line, donuts , radar, polararea
     data: {
       labels: [
-        'Month-1',
-        'Month-2',
-        'Month-3',
-        'Month-4',
-        'Month-5',
-        'Month-6',
+        'Ashish',
+        'Novarun',
+        'Bhupi',
+        'Amandeep',
+        'DKS',
+        'KKJ',
       ],
       datasets: barNew,
     },
     options: {
       title: new titleConfig(
-        'Expenditure of last 6 months',
+        'Ranking to top 6',
         true,
         24,
         'white',
