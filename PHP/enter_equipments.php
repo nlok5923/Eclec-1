@@ -2,7 +2,7 @@
 // Include the database configuration file
  session_start();
 include_once('pdo1.php');// it consider the pdo1.php in this code also
-$data = new Database_Connection1();
+$data = new Database_Connection();
 if(isset($_POST['equipment_name']) && isset($_POST['min_hrs']) && isset($_POST['max_hrs']) && isset($_POST['priority']) && isset($_POST['watt_consume']))
 {
 $equipment=$_POST['equipment_name'];
@@ -15,15 +15,14 @@ $sql=$data->equipment($equipment,$min,$max,$priority,$consumption,$Username);
 if($sql)
 {
 echo  '<div style="background-color:green"><h1 style="text-align:center;color:white">Sucess</h1></div>';
-echo "<script>window.location.href='add_expenses.php'</script>";
+echo "<script>window.location.href='enter_equipements.php'</script>";
 }
 else
 {
 echo '<div style="background-color:red"><h1 style="text-align:center;color:white">Oops!! Try Again</h1></div>';
-echo "<script>window.location.href='add_expenses.php'</script>";
+echo "<script>window.location.href='enter_equipments.php'</script>";
 }
 }
-?>
 ?>
 
 <!DOCTYPE html>
@@ -53,12 +52,11 @@ echo "<script>window.location.href='add_expenses.php'</script>";
         <img class="user__img" src ="../Images/bg.jpg" alt="bg image">
         <h1 class="user__name"><?php echo $_SESSION['name'] ?></h1>
         <hr>
-        <button  class="panel__item first__item"><i class="fa fa-save  adjust__size"></i> <a href="add_receipt.php">Save Bills</a></h1></button>
         <button class="panel__item first__item"><i class="fa fa-angle-double-up adjust__size"></i> <a href="Update.php">Update Profile</a></h1></button>
-        <button  class="panel__item first__item"><i class="fa fa-angle-double-up adjust__size"></i><a>Enter Equipments</a></button>
-        <button  class="panel__item first__item"><i class="fa fa-angle-double-up adjust__size"></i><a>See Usage</a></button>
-        <button  class="panel__item first__item"><i class="fa fa-angle-double-up adjust__size"></i><a>Score & deviation</a></button>
-        <button  class="panel__item first__item"><i class="fa fa-angle-double-up adjust__size"></i><a>Ranking</a></button>
+        <button  class="panel__item first__item"><i class="fa fa-angle-double-up adjust__size"></i><a href="enter_equipments.php">Enter Equipments</a></button>
+        <button  class="panel__item first__item"><i class="fa fa-angle-double-up adjust__size"></i><a href="usage.php">See Usage</a></button>
+        <button  class="panel__item first__item"><i class="fa fa-angle-double-up adjust__size"></i><a href="score.php">Score & deviation</a></button>
+        <button  class="panel__item first__item"><i class="fa fa-angle-double-up adjust__size"></i><a href="ranking.php">Ranking</a></button>
         </div>
         <div class="user__inputarea">
         <form method="POST">
@@ -67,6 +65,7 @@ echo "<script>window.location.href='add_expenses.php'</script>";
         <input type="number" name="max_hrs" placeholder="Enter max hours of usage">
         <input type="number" name="priority" placeholder="Enter priority of it's usage">
         <input type="number" name="watt_consume" placeholder="Enter the watt it consumes">
+        <input type="number" name="multiplicity" placeholder="Enter the multiplicity of equipment">
         <button type="submit" class="add__btn" >Add Equipment </button>
         <form>
         </div>

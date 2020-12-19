@@ -1,14 +1,14 @@
 .expense__report__table th {
     background-color:greenyellow;
     color: white;
-    font-family: "poppins";
-    font-size: 20px;
+    font-family: "montserrat";
+    font-size: 17px;
     border: none;
 }
 .expense__report__table {
-    width: 80%;
+    width: 90%;
     margin-top: 3%;
-    margin-left: 10%;
+    margin-left: 5%;
 }
 .user__inputarea {
     align-items: center;
