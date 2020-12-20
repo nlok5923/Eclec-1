@@ -1,5 +1,5 @@
 <?php
-define('server','localhost:3307');// defining hostname
+define('server','localhost');// defining hostname
 define('username','root'); // defining username
 define('password' ,''); // defining Password
 define('databasename', 'Eclec');// defining database name
@@ -21,7 +21,7 @@ return $adding;
 }
 public function checking($username)
 {
-	$viewing = mysqli_query($this->dbhost,"select * from signupid where Name = '$username')");
+	$viewing = mysqli_query($this->dbhost,"select * from signupid where Name = '$username' ");
 return $viewing;
 }
 public function viewall($username)
@@ -50,6 +50,11 @@ public function signin($username,$userpassword)
 {
 $seeing=mysqli_query($this->dbhost,"select Name from signupid where Name='$username' and Password='$userpassword'");
 return $seeing;
+}
+public function scoresaving($user,$date,$value)
+{
+	$saving = mysqli_query($this->dbhost,"INSERT into scores(user,date,value) VALUES ('$user','$date','$value')");
+	return $saving;
 }
 public function imagesaving($Name,$image,$Userdate,$user)
 {

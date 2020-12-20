@@ -2,6 +2,15 @@
 // Include the database configuration file
  session_start();
 include_once('pdo1.php');// it consider the pdo1.php in this code also
+if(isset($_POST['bill_date']) && isset($_POST['bill_amount']) )
+{
+// Posted Values
+$name = $_SESSION['name'];
+$date = $_POST['bill_date'];
+$amount = $_POST['bill_amount'];
+$dataadding = new Database_Connection();
+$sql = $dataadding->scoresaving($name,$date,$amount);
+}
 ?>
 
 <!DOCTYPE html>
@@ -41,10 +50,12 @@ include_once('pdo1.php');// it consider the pdo1.php in this code also
         </div>
         <div class="get__score">
         <h1 class="score__head">Enter your current month electricity bill to generate score </h1>
+        <form method = "POST">
         <input class="score__input" type="data" name="bill_date" placeholder="Enter date of bill">
         <input class="score__input" type="number" name="bill_amount" placeholder="Enter bill amount">
         <button class="gen__btn"type="submit">Generate Score</button>
         <h1 class="gen__score">Score generated</h1>
+        </form>
         </div>
     </section>
     <script src="../Script/add_expense.js?v=<?php echo time(); ?>"></script>
