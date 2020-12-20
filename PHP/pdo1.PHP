@@ -1,5 +1,5 @@
 <?php
-define('server','localhost:3307');// defining hostname
+define('server','localhost');// defining hostname
 define('username','root'); // defining username
 define('password' ,''); // defining Password
 define('databasename', 'Eclec');// defining database name
@@ -19,7 +19,12 @@ public function equipment($equipment,$min,$max,$priority,$consumption,$Username,
 $adding=mysqli_query($this->dbhost,"insert into equipment(user,equipment,min_hrs,max_hrs,priority,watt_consumption,number) values('$Username','$equipment','$min','$max','$priority','$consumption','$number')");
 return $adding;
 }
-
+public function viewall($username)
+{
+    $viewing = mysqli_query($this->dbhost,"select * from signupid where NOT (Name = '$username')
+    ");
+    return $viewing;
+}
 public function viewing($username)
 {
 $viewing = mysqli_query($this->dbhost,"select * from equipment where user='$username' ");
@@ -31,9 +36,9 @@ public function updatevalue($fname,$lname,$email,$pass,$income,$sum,$user)
 $update = mysqli_query($this->dbhost,"UPDATE signupid SET firstname='$fname', lastname='$lname',income='$income' ,Email='$email',expenses = '$sum' WHERE Name='$user' AND Password='$pass' ");
 return $update;
 }
-public function signup($name,$username,$useremail,$userpassword)
+public function signup($name,$username,$useremail,$userpassword,$locality)
 {
-$adding=mysqli_query($this->dbhost,"insert into signupid(Name,Username,Email,Password) values('$name','$username','$useremail','$userpassword')");
+$adding=mysqli_query($this->dbhost,"insert into signupid(Name,Username,Email,Password,locality) values('$name','$username','$useremail','$userpassword','$locality')");
 return $adding;
 }
 public function signin($username,$userpassword)
