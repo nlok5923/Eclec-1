@@ -9,7 +9,8 @@ $Username=$_POST['username'];
 $Useremail=$_POST['email'];
 $locality = $_POST['locality'];
 $Userpassword=md5($_POST['psw']);
- $sql = $signupdata->checking($Name);
+$sql = $signupdata->checking($Name);
+
 if($sql->num_rows > 0)
 {
   echo "<script>alert('Username exists Try something else');</script>";
@@ -76,12 +77,6 @@ echo "<script>window.location.href='sign_up.php'</script>";
             name="locality"
             required
           />
-          <input
-            class="field"
-            placeholder="Enter state"
-            name="state"
-            required
-            />
           <input
             type="text"
             placeholder="Enter email"
