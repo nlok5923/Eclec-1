@@ -3,16 +3,15 @@ session_start();// it basically start the session so that it should have the nam
 include_once('pdo1.php');// it  include the pdo1.php so that when function is called it uses that function
 $datainsert=new Database_Connection();
 //it checks where all the form field are written or not
-if(isset($_POST['fname']) && isset($_POST['lname']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['income']) && isset($_POST['sum'])){
+if(isset($_POST['fname']) && isset($_POST['lname']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['bill'])){
    // below save the fname,lname,email,password
     $fname=$_POST['fname'];
     $lname=$_POST['lname'];
     $email=$_POST['email'];
     $pass=md5($_POST['password']);
-    $income=$_POST['income'];
-    $sum=$_POST['sum'];
+    $income=$_POST['bill'];
     $user=($_SESSION['name']);
-    $sql=$datainsert->updatevalue($fname,$lname,$email,$pass,$income,$sum,$user);// it calls the function and move to the pdo1 file function and works on it
+    $sql=$datainsert->updatevalue($fname,$lname,$email,$pass,$income,$user);// it calls the function and move to the pdo1 file function and works on it
     if($sql)
     {
         echo '<div style="background-color:green"><h1 style="text-align:center;color:white">Success</h1></div>';

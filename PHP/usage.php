@@ -18,6 +18,7 @@ $equipments = array(
   );
 $username = $_SESSION['name'];
 $sql = $dataviewing->viewing($username);
+
 $j=0;
 $k =$sql->num_rows;
 while ($row=mysqli_fetch_array($sql)) {
@@ -32,7 +33,17 @@ while ($row=mysqli_fetch_array($sql)) {
   $j = $j+1;
 }
 ?>
+<?php
+$sql = $dataviewing->checking($username);
+while ($row=mysqli_fetch_array($sql)) {
+  ?>
+  <?php $state = $row['state']; ?>
+  <?php  $bill =  $row['income'];?>
+  <?php
+}
+?>
 
+?>
 <?php
 class Menu{
   public $min_Hour;

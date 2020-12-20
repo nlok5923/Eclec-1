@@ -38,12 +38,12 @@ return $viewing;
 
 public function updatevalue($fname,$lname,$email,$pass,$income,$sum,$user)
 {
-$update = mysqli_query($this->dbhost,"UPDATE signupid SET firstname='$fname', lastname='$lname',income='$income' ,Email='$email',expenses = '$sum' WHERE Name='$user' AND Password='$pass' ");
+$update = mysqli_query($this->dbhost,"UPDATE signupid SET firstname='$fname', lastname='$lname',income='$income' ,Email='$email' WHERE Name='$user' AND Password='$pass' ");
 return $update;
 }
-public function signup($name,$username,$useremail,$userpassword,$locality)
+public function signup($name,$username,$useremail,$userpassword,$locality,$state)
 {
-$adding=mysqli_query($this->dbhost,"insert into signupid(Name,Username,Email,Password,locality) values('$name','$username','$useremail','$userpassword','$locality')");
+$adding=mysqli_query($this->dbhost,"insert into signupid(Name,Username,Email,Password,locality,state) values('$name','$username','$useremail','$userpassword','$locality','$state')");
 return $adding;
 }
 public function signin($username,$userpassword)

@@ -1,7 +1,7 @@
 <?php
 include_once('pdo1.php');
 $signupdata=new Database_Connection();
-if(isset($_POST['name']) && isset($_POST['username']) && isset($_POST['email']) && isset($_POST['psw']) && isset($_POST['locality']))
+if(isset($_POST['name']) && isset($_POST['username']) && isset($_POST['email']) && isset($_POST['psw']) && isset($_POST['locality']) && isset($_POST['state']))
 {
 // Posted Values
 $Name=$_POST['name'];
@@ -9,6 +9,7 @@ $Username=$_POST['username'];
 $Useremail=$_POST['email'];
 $locality = $_POST['locality'];
 $Userpassword=md5($_POST['psw']);
+$state = $_POST['state'];
 $sql = $signupdata->checking($Name);
 
 if($sql->num_rows > 0)
@@ -18,7 +19,7 @@ if($sql->num_rows > 0)
 }
 else
 {
-$sql=$signupdata->signup($Name,$Username,$Useremail,$Userpassword,$locality);
+$sql=$signupdata->signup($Name,$Username,$Useremail,$Userpassword,$locality,$state);
 if($sql)
 {
 echo "<script>window.location.href='login.php'</script>";
@@ -75,6 +76,12 @@ echo "<script>window.location.href='sign_up.php'</script>";
             type="text"
             placeholder="Enter locality(just one word)"
             name="locality"
+            required
+          />
+<input
+            type="text"
+            placeholder="Enter State"
+            name="state"
             required
           />
           <input
