@@ -9,8 +9,7 @@ $Username=$_POST['username'];
 $Useremail=$_POST['email'];
 $locality = $_POST['locality'];
 $Userpassword=md5($_POST['psw']);
-// $sql = $signupdata->checking($Name);
-$sql->num_rows = 0;
+ $sql = $signupdata->checking($Name);
 if($sql->num_rows > 0)
 {
   echo "<script>alert('Username exists Try something else');</script>";

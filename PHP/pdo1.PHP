@@ -19,6 +19,11 @@ public function equipment($equipment,$min,$max,$priority,$consumption,$Username,
 $adding=mysqli_query($this->dbhost,"insert into equipment(user,equipment,min_hrs,max_hrs,priority,watt_consumption,number) values('$Username','$equipment','$min','$max','$priority','$consumption','$number')");
 return $adding;
 }
+public function checking($username)
+{
+	$viewing = mysqli_query($this->dbhost,"select * from signupid where Name = '$username')");
+return $viewing;
+}
 public function viewall($username)
 {
     $viewing = mysqli_query($this->dbhost,"select * from signupid where NOT (Name = '$username')
