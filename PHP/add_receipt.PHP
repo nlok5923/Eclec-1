@@ -82,11 +82,11 @@ echo "<script>window.location.href='add_receipt.php'</script>";
         </div>
         <div class="add__reciepts">
             <h1><u>Receipt</u></h1>
-            <h2>Add images of your receipts for future </h1>
+            <h2>Add images of your bills for your future</h1>
             <form method="POST" enctype="multipart/form-data">
-            <input type="text" class="first" name="expense" placeholder="expense name"/><br>
+            <input type="text" class="first" name="expense" placeholder="bill name"/><br>
             <input type="date" placeholder="Date" name="date"><br >
-            <textarea rows="7" cols="32" name="description" placeholder="Add description of receipt"></textarea><br>
+            <textarea rows="7" cols="32" name="description" placeholder="Add description of electricity bill"></textarea><br>
             <label class="sel__img">Select Image File:(only .jpg ,.png , .jpeg)</label>
              <input type="file" name="image">
             <input class="add__it" type="submit" onclick="showAlert()" name="submit" value="Add it">

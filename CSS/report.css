@@ -411,3 +411,11 @@ header {
   font-family: "montserrat";
   display: block;
 }
+
+.ultra-head {
+  margin-top: 20%;
+  font-size:60px;
+  color: white;
+  font-family: "montserrat";
+  text-align: center;
+}

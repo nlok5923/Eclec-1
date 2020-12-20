@@ -25,7 +25,7 @@ include_once('pdo1.php');// it consider the pdo1.php in this code also
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <title>NHDD | Add Receipte </title>
+    <title>NHDD | Add Receipt </title>
     <header>
         <div class="logo__name">
         <img class="nhdd_logo" src="../Images/NHDD_logo.png" alt="NHDD logo">
@@ -44,7 +44,7 @@ include_once('pdo1.php');// it consider the pdo1.php in this code also
         <button  class="panel__item first__item"><i class="fa fa-angle-double-up adjust__size"></i><a href="usage.php">See Usage</a></button>
         <button  class="panel__item first__item"><i class="fa fa-angle-double-up adjust__size"></i><a href="score.php">Score & deviation</a></button>
         <button  class="panel__item first__item"><i class="fa fa-angle-double-up adjust__size"></i><a href="ranking.php">Ranking</a></button>
-</div>  
+</div>
         <div class="ranking">
     <div class="bar__chart__container">
             <canvas id="myChart"></canvas>
