@@ -9,7 +9,7 @@ $Username=$_POST['username'];
 $Useremail=$_POST['email'];
 $locality = $_POST['locality'];
 $Userpassword=md5($_POST['psw']);
-// $sql = $signupdata->checking($Name);
+ $sql = $signupdata->checking($Name);
 $sql->num_rows = 0;
 if($sql->num_rows > 0)
 {
