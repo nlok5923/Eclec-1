@@ -1,6 +1,6 @@
 <?php
 $user=$_GET['a']; // it save the regdate which is passed when delete button is clicked
-define('server','localhost');// defining hostname
+define('server','localhost:3307');// defining hostname
 define('username','root'); // defining username
 define('password' ,''); // defining Password
 define('databasename', 'Eclec');// defining database name

@@ -77,6 +77,12 @@ echo "<script>window.location.href='sign_up.php'</script>";
             required
           />
           <input
+            class="field"
+            placeholder="Enter state"
+            name="state"
+            required
+            />
+          <input
             type="text"
             placeholder="Enter email"
             name="email"
