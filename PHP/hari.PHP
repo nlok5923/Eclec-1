@@ -36,6 +36,7 @@ while ($row=mysqli_fetch_array($sql)) {
 <?php
 for($i =0;$i<$k;$i++)
 {
+  echo gettype($i);
   echo $k;
   echo "\n";
   echo $equipments[$i][0];

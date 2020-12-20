@@ -1,78 +1,7 @@
 <?php
 include('pdo1.php');
 session_start();
-$name=$_SESSION['name'];
-$t=time();
-
-$p=date("m",$t);
-error_reporting(0);
 ?>
-<?php
-for ($i = 0; $i <= 6; $i++)
-{
-   $startmonths[] = date("Y-m-d",strtotime( date( 'Y-m-01' )." -$i months"));
-}
-for ($i = 0; $i <= 6; $i++)
-{
-   $endmonths[] = date("Y-m-d", strtotime( date( 'Y-m-30' )." -$i months"));
-}
-$dataviewing=new Database_Connection();
-$totalcost=array(0,0,0,0,0,0);
-for($i=0;$i<=6;$i++)
-{
-  $sql = $dataviewing->dateviewing('Occasional',$startmonths[$i],$endmonths[$i], $name );
-$totalcost[$i]=0;
-                while ($row=mysqli_fetch_array($sql)) {
-?>
-
-<?php
-  // totalcost[0] stores sum of occasional expense of current month
-  //simlarly totalcost[1] stores is sum of occasional expense of previous month
-  $totalcost[$i]=$totalcost[$i]+$row['cost'];
-}
-
-                    }
-$totalcost1=array(0,0,0,0,0,0);
-for($i=0;$i<=6;$i++)
-{
-  $sql = $dataviewing->dateviewing('monthly',$startmonths[$i],$endmonths[$i],$name);
-$totalcost1[$i]=0;
-                while ($row=mysqli_fetch_array($sql)) {
-?>
-
-<?php
-                 // totalcost1[0] stores is sum of monthly expense of current month
-                 //simlarly totalcost1[1] stores is sum of montly expense of previous month
-			              $totalcost1[$i]=$totalcost1[$i]+$row['cost'];
-}
-
-                    }
-$dataviewing=new Database_Connection();
-$totalcost2=array(0,0,0,0,0,0);
-for($i=0;$i<=6;$i++)
-{
-  $sql = $dataviewing->dateviewing('daily',$startmonths[$i],$endmonths[$i],$name);
-$totalcost2[$i]=0;
-                while ($row=mysqli_fetch_array($sql)) {
-
-                 ?>
-
-<?php
-                 // totalcost2[0] stores in sum of daily expense of current month
-                 //simlarly totalcost2[1] stores is sum of daily expense of previous month
-			              $totalcost2[$i]=$totalcost2[$i]+$row['cost'];
-}
-        }
-?>
-<?php
-$sql = $dataviewing->take($name);
-while($row = mysqli_fetch_array($sql)){
- ?>
-
-<?php  $expenses= $row['expenses'];
-$income=$row['income'];
-?>
-<?php }?>
 
 
 <!DOCTYPE html>
@@ -119,9 +48,6 @@ $income=$row['income'];
 </head>
 <body>
 
-<div class="loader__bg">
-        <div class="loader"></div>
-        </div>
     <section id="add__expense">
         <ul id="list"></ul>
         <div class = "user__panel">
@@ -140,9 +66,6 @@ $income=$row['income'];
     </body>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script type="text/javascript" charset="utf-8">
-    setTimeout(function(){
-    $('.loader__bg').fadeToggle();
-     },1500);
 //dropdown abstract class to maintain the dropdown functionality
 // class dropdown{
 //   constructor(){

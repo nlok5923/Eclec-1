@@ -219,12 +219,12 @@ try {
     type: 'bar', //bar, pie, horizontal , line, donuts , radar, polararea
     data: {
       labels: [
-        'Ashish',
-        'Novarun',
-        'Bhupi',
-        'Amandeep',
-        'DKS',
-        'KKJ',
+        'A',
+        'N',
+        'B',
+        'A',
+        'D',
+        'K',
       ],
       datasets: barNew,
     },
