@@ -40,7 +40,7 @@ if(isset($_POST['fname']) && isset($_POST['lname']) && isset($_POST['email']) &&
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <title>NHDD | Update Profile </title>
+    <title>NHDD | Set bill </title>
     <header>
         <div class="logo__name">
         <img class="nhdd_logo" src="../Images/NHDD_logo.png" alt="NHDD logo">
@@ -55,21 +55,21 @@ if(isset($_POST['fname']) && isset($_POST['lname']) && isset($_POST['email']) &&
         <img class="user__img" src ="../Images/bg.jpg" alt="bg image">
         <h1 class="user__name"><?php echo $_SESSION['name'] ?></h1>
         <hr>
-        <button class="panel__item first__item"><i class="fa fa-angle-double-up adjust__size"></i> <a href="Update.php">Update Profile</a></h1></button>
+        <button class="panel__item first__item"><i class="fa fa-angle-double-up adjust__size"></i> <a href="Update.php">Set bill</a></h1></button>
         <button  class="panel__item first__item"><i class="fa fa-angle-double-up adjust__size"></i><a href="enter_equipments.php">Enter Equipments</a></button>
         <button  class="panel__item first__item"><i class="fa fa-angle-double-up adjust__size"></i><a href="usage.php">See Usage</a></button>
         <button  class="panel__item first__item"><i class="fa fa-angle-double-up adjust__size"></i><a href="score.php">Score & deviation</a></button>
         <button  class="panel__item first__item"><i class="fa fa-angle-double-up adjust__size"></i><a href="ranking.php">Ranking</a></button>
         </div>
         <div class="upd__prof">
-            <h1 class="upd__head"> Update Profile</h1>
+            <h1 class="upd__head"> Set electricity bill </h1>
             <form method="POST">
             <input type="text" id="lname" name="fname" placeholder="First Name">
             <input type="text" id="lname" name="lname" placeholder="Last Name">
             <input type="text" id="lname" name="email" placeholder="Email">
             <input type="password" id="lname" name="password" placeholder="Password">
-            <input type="text" id="lname" name="income" placeholder="Income">
-            <button class="BUTTON_KMY">Update</button></form>
+            <input type="text" id="lname" name="bill" placeholder="Electricity">
+            <button class="BUTTON_KMY">Set bill</button></form>
         </div>
     </section>
     <script src="../Script/add_expense.js?v=<?php echo time(); ?>"></script>

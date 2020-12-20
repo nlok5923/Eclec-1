@@ -1,5 +1,5 @@
 <?php
-define('server','localhost');// defining hostname
+define('server','localhost:3307');// defining hostname
 define('username','root'); // defining username
 define('password' ,''); // defining Password
 define('databasename', 'Eclec');// defining database name

@@ -33,7 +33,7 @@ include_once('pdo1.php');// it consider the pdo1.php in this code also
         <img class="user__img" src ="../Images/bg.jpg" alt="bg image">
         <h1 class="user__name"><?php echo $_SESSION['name'] ?></h1>
         <hr>
-        <button class="panel__item first__item"><i class="fa fa-angle-double-up adjust__size"></i> <a href="Update.php">Update Profile</a></h1></button>
+        <button class="panel__item first__item"><i class="fa fa-angle-double-up adjust__size"></i> <a href="Update.php">Set Bill</a></h1></button>
         <button  class="panel__item first__item"><i class="fa fa-angle-double-up adjust__size"></i><a href="enter_equipments.php">Enter Equipments</a></button>
         <button  class="panel__item first__item"><i class="fa fa-angle-double-up adjust__size"></i><a href="usage.php">See Usage</a></button>
         <button  class="panel__item first__item"><i class="fa fa-angle-double-up adjust__size"></i><a href="score.php">Score & deviation</a></button>

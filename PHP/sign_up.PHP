@@ -1,10 +1,7 @@
 <?php
-// basically it will include pdo file for data connection to the sql server
 include_once('pdo1.php');
-// it make a new class of database_connection1 called signupdata
 $signupdata=new Database_Connection();
-// it checks whether all field of form are filled or not
-if(isset($_POST['name']) && isset($_POST['username']) && isset($_POST['email']) && isset($_POST['psw']) && isset($_POST['locality'])
+if(isset($_POST['name']) && isset($_POST['username']) && isset($_POST['email']) && isset($_POST['psw']) && isset($_POST['locality']))
 {
 // Posted Values
 $Name=$_POST['name'];
@@ -12,20 +9,18 @@ $Username=$_POST['username'];
 $Useremail=$_POST['email'];
 $locality = $_POST['locality'];
 $Userpassword=md5($_POST['psw']);
-//Function Calling
-$sql = $signupdata->checking($Name);
+// $sql = $signupdata->checking($Name);
+$sql->num_rows = 0;
 if($sql->num_rows > 0)
 {
   echo "<script>alert('Username exists Try something else');</script>";
-  echo "<script>window.location.href='sign_up.php'</script>"; 
+  echo "<script>window.location.href='sign_up.php'</script>";
 }
 else
 {
 $sql=$signupdata->signup($Name,$Username,$Useremail,$Userpassword,$locality);
 if($sql)
 {
-// Message for successfull insertion
-//echo "<script>alert('Registration successfull.');</script>";
 echo "<script>window.location.href='login.php'</script>";
 }
 else
@@ -53,7 +48,7 @@ echo "<script>window.location.href='sign_up.php'</script>";
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   </head>
   <body>
-  <img class="nhdd_logo" src="../Images/NHDD_logo.png" alt="NHDD logo">   
+  <img class="nhdd_logo" src="../Images/NHDD_logo.png" alt="NHDD logo">
     <div>
     <div class="login__holder">
       <div class="login__container">
@@ -75,7 +70,7 @@ echo "<script>window.location.href='sign_up.php'</script>";
             name="name"
             required
           />
-	<input
+        	<input
             class="field"
             type="text"
             placeholder="Enter locality(just one word)"
@@ -108,6 +103,6 @@ echo "<script>window.location.href='sign_up.php'</script>";
       </div>
     </div>
     </div>
-  </body> -->
+  </body>
   <!-- <script src="../Script/Common.js"></script> -->
  </html>

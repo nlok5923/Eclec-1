@@ -48,29 +48,29 @@ include_once('pdo1.php');
       </ul>
     </section>
     <div class="mid__area">
-      <img class="mid__img" src="../Images/hand.jpg" />
+      <img class="mid__img" src="../Images/elec.jpeg" />
       <button class="BUTTON_KMY handle__free">Free account</button>
       <div class="hori__rul mid"></div>
     </div>
 
-    <div class="salient__feat">
+    <!-- <div class="salient__feat">
       <h1>Salient features</h1>
       <div class="sal__card">
         <img src="../Images/transact_1.jpeg" />
         <img src="../Images/dashboard_1.jpeg" />
         <img src="../Images/analy_1.jpeg" />
       </div>
-    </div>
+    </div> -->
     <div class="accounting">
-      <div class="hori__rul"></div>
+      <!-- <div class="hori__rul"></div> -->
       <h1>Organized and stress free acounting</h1>
       <div class="handle__mid">
         <div class="all__points">
           <h1>&#9989; Quick and easy to use dashboard</h1>
-          <h1>&#9989; Easy tracking of expenses</h1>
-          <h1>&#9989; Analysis pie charts and credit reports</h1>
+          <h1>&#9989; Easy tracking of rising electricity bill</h1>
+          <h1>&#9989; Get ranking in your locality</h1>
         </div>
-        <img src="../Images/dash_1.png" />
+        <img src="../Images/dash_2.png" />
       </div>
     </div>
     <div class="first"></div>
