@@ -62,9 +62,7 @@ array_push($items,new Menu($equipments[$i][1],$equipments[$i][2],$equipments[$i]
 // echo $items[$i]->min_Hour;
 }
 function BillAmount($electricity){
-  //here electricity is  watt used in one day
-   //please multiply electricity by 60 to calculate for two months and also divide by 1000 for unit.
-   //return amount of bill of 2 months.
+  //currently the webiste is according to bihar tariff
   $state = "Bihar";
   $json = file_get_contents('https://nlok5923.github.io/RawQuotesData/tariff.json');
   $data = json_decode($json);
@@ -84,7 +82,7 @@ function BillAmount($electricity){
   }
   $electricity = $electricity*30;
   $electricity =$electricity/1000;
-   return $rate*$electricity;
+   return ($rate*$electricity-45);
 }
 
 function Calculate($k,$items)
@@ -93,7 +91,7 @@ function Calculate($k,$items)
   //    var itemss = [new Menu(10,14,10,"TV",20,1),new Menu(3,7,7,"Ac",200,2),new Menu(5,9,4,"Freeze",100,1)];
 
 
-    $Expected_Avg_Bill = 7000;
+    $Expected_Avg_Bill = 200;
     $min_watt_per_day=0;
     $max_watt_per_day=0;
 
@@ -170,14 +168,6 @@ function Calculate($k,$items)
             $flag = false;
         }
     }
-    // for($i=0;$i<$k;$i++)
-    //     {
-    //         // console.log(items[i].min_range+" "+items[i].max_range);
-    //         echo $items[$i]->name;
-    //         echo $items[$i]->min_range ;
-    //         echo $items[$i]->max_range;
-
-    //     }
 }
 
 Calculate($k,$items);
@@ -227,6 +217,8 @@ Calculate($k,$items);
             $dataviewing=new Database_Connection();
               $sql = $dataviewing->viewing($username);
               $count = 0;
+              $json_str = file_get_contents('https://nlok5923.github.io/RawQuotesData/cloud_data.json');
+              $data_new = json_decode($json_str);
               while ($row=mysqli_fetch_array($sql)) {
                   ?>
 
@@ -238,16 +230,28 @@ Calculate($k,$items);
               <th>S.No. </th>
               <th>Min usage(hrs)</th>
               <th>Max usage(hrs)</th>
-              <th>No. of equipment</th>
+              <th>Status</th>
               <th> ....</th>
               <th> ....</th>
             </tr>
 
             <tr>
             <td><?php echo $count ;?></td>
-            <td><?php  echo $items[$count]->min_range ?></td>
-            <td><?php  echo $items[$count]->max_range ?></td>
-            <td><?php  echo $items[$count]->multiplicity ?></td>
+            <td><?php echo $items[$count]->min_range ?></td>
+            <td><?php echo $items[$count]->max_range ?></td>
+            <?php
+            $flag = true;
+            for($i =0 ;$i<sizeof($data_new);$i++) {
+              if(!strcasecmp($data_new[$i]->name,$items[$count]->name)) {
+                echo "<td>".$data_new[$i]->status."</td>";
+                $flag = false;
+              }
+            }
+            if($flag)
+            {
+              echo "<td>under limit</td>";
+            }
+            ?>
             <td><?php echo "<a href='delete.php?a=".$row['RegDate']."'>Delete</a>"; ?></td>
             <td><?php echo "<a href='Update_info.php?a=".$row['RegDate']."'>Update</a>"; ?></td>
             </tr>

@@ -1,6 +1,5 @@
 <?php
 session_start();
-// basically it will include pdo1 file for data connection to the sql server
 include_once('pdo1.php');
 
 ?>
@@ -53,16 +52,7 @@ include_once('pdo1.php');
       <div class="hori__rul mid"></div>
     </div>
 
-    <!-- <div class="salient__feat">
-      <h1>Salient features</h1>
-      <div class="sal__card">
-        <img src="../Images/transact_1.jpeg" />
-        <img src="../Images/dashboard_1.jpeg" />
-        <img src="../Images/analy_1.jpeg" />
-      </div>
-    </div> -->
     <div class="accounting">
-      <!-- <div class="hori__rul"></div> -->
       <h1>Organized and stress free acounting</h1>
       <div class="handle__mid">
         <div class="all__points">
@@ -97,7 +87,6 @@ include_once('pdo1.php');
         <h1>NHDD7381@gmail.com</h1>
       </div>
     </div>
-    <!-- <img class="adjust__hori" src="./Images/vec2.png" /> -->
     <div class="foot__line"></div>
   </body>
   <script src="../Script/Common.js"></script>

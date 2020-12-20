@@ -230,7 +230,7 @@ try {
     },
     options: {
       title: new titleConfig(
-        'Ranking to top 6',
+        'Ranking of top 6',
         true,
         24,
         'white',
