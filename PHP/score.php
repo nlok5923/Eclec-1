@@ -12,7 +12,15 @@ $dataadding = new Database_Connection();
 $sql = $dataadding->scoresaving($name,$date,$amount);
 }
 ?>
-
+<?php
+$sql = $dataviewing->checking($username);
+while ($row=mysqli_fetch_array($sql)) {
+  ?>
+  <?php $state = $row['state']; ?>
+  <?php  $bill =  $row['income'];?>
+  <?php
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
